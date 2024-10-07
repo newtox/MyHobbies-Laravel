@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="79f75cd5-91d9-4b16-ad68-cff0af7cec9e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2024_10_07_081021_create_hobbies_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_10_07_081021_create_hobbies_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,12 +187,23 @@
       <option name="presentableId" value="Default" />
       <updated>1728046874595</updated>
       <workItem from="1728046879711" duration="6326000" />
-      <workItem from="1728284948022" duration="3544000" />
+      <workItem from="1728284948022" duration="4958000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

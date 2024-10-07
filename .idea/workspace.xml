@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79f75cd5-91d9-4b16-ad68-cff0af7cec9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/hobby/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/startseite.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/startseite.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,12 +154,13 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/justin.lyschik/PhpStormProjects/MyHobbies-Laravel/resources/views/hobby&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -164,6 +169,16 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\justin.lyschik\PhpStormProjects\MyHobbies-Laravel\resources\views\hobby" />
+      <recent name="C:\Users\justin.lyschik\PhpStormProjects\MyHobbies-Laravel\resources\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\justin.lyschik\PhpStormProjects\MyHobbies-Laravel\resources\views" />
+      <recent name="C:\Users\justin.lyschik\PhpStormProjects\MyHobbies-Laravel\resources\views\hobby" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
@@ -187,7 +202,9 @@
       <option name="presentableId" value="Default" />
       <updated>1728046874595</updated>
       <workItem from="1728046879711" duration="6326000" />
-      <workItem from="1728284948022" duration="4958000" />
+      <workItem from="1728284948022" duration="12917000" />
+      <workItem from="1728300279536" duration="87000" />
+      <workItem from="1728300387819" duration="1699000" />
     </task>
     <servers />
   </component>

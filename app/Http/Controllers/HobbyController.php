@@ -5,15 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Hobby;
 use App\Http\Requests\StoreHobbyRequest;
 use App\Http\Requests\UpdateHobbyRequest;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 
 class HobbyController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View|Factory|Application
     {
-        //
+        $hobbies = Hobby::all();
+        return view('hobby.index')->with('hobbies', $hobbies);
     }
 
     /**
@@ -21,7 +25,7 @@ class HobbyController extends Controller
      */
     public function create()
     {
-        //
+        return view('hobby.create');
     }
 
     /**

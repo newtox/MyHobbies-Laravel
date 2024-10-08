@@ -58,7 +58,7 @@ class HobbyController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Hobby $hobby)
+    public function show(Hobby $hobby): View|Factory|Application
     {
         return view('hobby.show')->with('hobby', $hobby);
     }
@@ -66,9 +66,9 @@ class HobbyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Hobby $hobby)
+    public function edit(Hobby $hobby): View|Factory|Application
     {
-        //
+        return view('hobby.edit')->with('hobby', $hobby);
     }
 
     /**

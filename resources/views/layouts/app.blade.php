@@ -86,6 +86,18 @@
     </nav>
 
     <main class="py-4">
+        @isset($hobby_created)
+            <div class="container mb-lg-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="alert alert-success">
+                            {!! $hobby_created !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endisset
+
         @if($errors->any())
             <div class="container mb-lg-3">
                 <div class="row justify-content-center">

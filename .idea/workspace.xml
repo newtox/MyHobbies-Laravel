@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79f75cd5-91d9-4b16-ad68-cff0af7cec9e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MyHobbies-Laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyHobbies-Laravel.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/de/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/de/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/de/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/de/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/en/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/en/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/en/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/en/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HobbyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/hobby/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +160,7 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/justin.lyschik/PhpStormProjects/MyHobbies-Laravel/resources/views/hobby&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/justin.lyschik/PhpStormProjects/MyHobbies-Laravel/lang&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -169,6 +177,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\justin.lyschik\PhpStormProjects\MyHobbies-Laravel\lang" />
       <recent name="C:\Users\justin.lyschik\PhpStormProjects\MyHobbies-Laravel\resources\views\hobby" />
       <recent name="C:\Users\justin.lyschik\PhpStormProjects\MyHobbies-Laravel\resources\views" />
     </key>
@@ -202,7 +211,8 @@
       <workItem from="1728046879711" duration="6326000" />
       <workItem from="1728284948022" duration="12917000" />
       <workItem from="1728300279536" duration="87000" />
-      <workItem from="1728300387819" duration="6666000" />
+      <workItem from="1728300387819" duration="11748000" />
+      <workItem from="1728370534551" duration="3900000" />
     </task>
     <servers />
   </component>

@@ -14,11 +14,13 @@
                             @csrf
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control w-50" id="name" name="name" value="{{ old('name') }}">
+                                <input type="text" class="form-control w-50 {{ $errors->has('name') ? 'border-danger' : '' }}" id="name" name="name" value="{{ old('name') }}">
+                                <small class="form-text text-danger">{!! $errors->first('name') !!}</small>
                             </div>
                             <div class="form-group">
                                 <label for="beschreibung">Beschreibung</label>
-                                <textarea class="form-control w-50" id="beschreibung" name="beschreibung" rows="2">{{ old('beschreibung') }}</textarea>
+                                <textarea class="form-control w-50 {{ $errors->has('beschreibung') ? 'border-danger' : '' }}" id="beschreibung" name="beschreibung" rows="2">{{ old('beschreibung') }}</textarea>
+                                <small class="form-text text-danger">{!! $errors->first('beschreibung') !!}</small>
                             </div>
                             <input class="btn btn-success mt-4" type="submit" value="Hobby erstellen">
                         </form>

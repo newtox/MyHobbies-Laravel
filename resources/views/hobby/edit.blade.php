@@ -10,8 +10,9 @@
                     <div class="card-header">{{ __('Hobby bearbeiten') }}</div>
 
                     <div class="card-body">
-                        <form action="/hobby" method="post">
+                        <form action="/hobby/{{ $hobby->id }}" method="post">
                             @csrf
+                            @method('PUT')
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text"
@@ -22,9 +23,9 @@
                             <div class="form-group">
                                 <label for="beschreibung">Beschreibung</label>
                                 <textarea
-                                        class="form-control w-50 {{ $errors->has('beschreibung') ? 'border-danger' : '' }}"
-                                        id="beschreibung" name="beschreibung"
-                                        rows="2">{{ old('beschreibung') ?? $hobby->beschreibung }}</textarea>
+                                    class="form-control w-50 {{ $errors->has('beschreibung') ? 'border-danger' : '' }}"
+                                    id="beschreibung" name="beschreibung"
+                                    rows="2">{{ old('beschreibung') ?? $hobby->beschreibung }}</textarea>
                                 <small class="form-text text-danger">{!! $errors->first('beschreibung') !!}</small>
                             </div>
                             <input class="btn btn-success mt-4" type="submit" value="Hobby bearbeiten">

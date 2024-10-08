@@ -16,6 +16,11 @@
                                     <a class="ms-2" href="/hobby/{{ $hobby->id }}">Detailansicht</a>
                                     <a class="ms-2 btn btn-sm btn-outline-primary" href="/hobby/{{ $hobby->id }}/edit"><i
                                             class="fas fa-pencil"></i> Bearbeiten</a>
+                                    <form style="display: inline;" action="/hobby/{{ $hobby->id }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input class="ms-2 btn btn-sm btn-outline-danger" type="submit" value="Löschen">
+                                    </form>
                                 </li>
                             @endforeach
                         </ul>

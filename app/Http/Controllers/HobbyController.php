@@ -49,7 +49,6 @@ class HobbyController extends Controller
 
         $hobby->save();
 
-        //return redirect('/hobby');
         return $this->index()->with([
             'hobby_created' => 'Das Hobby <b>' . $hobby->name . '</b> wurde erfolgreich erstellt.'
         ]);
@@ -76,7 +75,21 @@ class HobbyController extends Controller
      */
     public function update(UpdateHobbyRequest $request, Hobby $hobby)
     {
-        //
+        $request->validate(
+            [
+                'name' => ['required', 'string', 'min:3', 'max:255'],
+                'beschreibung' => ['required', 'string', 'min:5', 'max:255'],
+            ]
+        );
+
+        $hobby->update([
+            'name' => $request->get('name'),
+            'beschreibung' => $request->get('beschreibung')
+        ]);
+
+        return $this->index()->with([
+            'hobby_created' => 'Das Hobby <b>' . $request->name . '</b> wurde erfolgreich bearbeitet.'
+        ]);
     }
 
     /**
@@ -84,6 +97,12 @@ class HobbyController extends Controller
      */
     public function destroy(Hobby $hobby)
     {
-        //
+        $old_name = $hobby->name;
+
+        $hobby->delete();
+
+        return $this->index()->with([
+            'hobby_created' => 'Das Hobby <b>' . $old_name . '</b> wurde erfolgreich gelöscht.'
+        ]);
     }
 }

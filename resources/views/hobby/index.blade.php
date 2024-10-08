@@ -12,10 +12,12 @@
                     <div class="card-body">
                         <ul class="list-group">
                             @foreach($hobbies as $hobby)
-                                <li class="list-group-item">{{ $hobby->name }}</li>
+                                <li class="list-group-item">{{ $hobby->name }} <a class="ms-2" href="/hobby/{{ $hobby->id }}">Detailansicht</a>
+                                </li>
                             @endforeach
                         </ul>
-                        <a class="btn btn-primary btn-sm mt-3" href="hobby/create"><i class="fas fa-plus-circle"></i> Neues
+                        <a class="btn btn-primary btn-sm mt-3" href="hobby/create"><i class="fas fa-plus-circle"></i>
+                            Neues
                             Hobby erstellen</a>
                     </div>
                 </div>

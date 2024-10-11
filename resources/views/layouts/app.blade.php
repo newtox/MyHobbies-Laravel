@@ -36,13 +36,18 @@
                     <li class="nav-item">
                         <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">{{ __('Startseite') }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::is('hobby*') ? 'active' : '' }}" href="/hobby">Hobbies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::is('info') ? 'active' : '' }}"
-                           href="/info">{{ __('Information') }}</a>
-                    </li>
+                    @if(auth()->check())
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::is('hobby*') ? 'active' : '' }}" href="/hobby">Hobbies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::is('tag*') ? 'active' : '' }}" href="/tag">Tags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ Request::is('info') ? 'active' : '' }}"
+                               href="/info">{{ __('Information') }}</a>
+                        </li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -69,7 +74,7 @@
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="preventDefault();
+                                   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
@@ -86,12 +91,12 @@
     </nav>
 
     <main class="py-4">
-        @isset($hobby_created)
+        @isset($create_update_delete)
             <div class="container mb-lg-3">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="alert alert-success">
-                            {!! $hobby_created !!}
+                            {!! $create_update_delete !!}
                         </div>
                     </div>
                 </div>

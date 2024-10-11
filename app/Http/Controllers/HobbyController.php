@@ -23,7 +23,7 @@ class HobbyController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View|Factory|Application
     {
         return view('hobby.create');
     }
@@ -49,8 +49,8 @@ class HobbyController extends Controller
 
         $hobby->save();
 
-        return $this->index()->with([
-            'hobby_created' => 'Das Hobby <b>' . $hobby->name . '</b> wurde erfolgreich erstellt.'
+        return redirect()->route('hobby.index')->with([
+            'create_update_delete' => 'Das Hobby <b>' . $hobby->name . '</b> wurde erfolgreich erstellt.'
         ]);
     }
 
@@ -87,8 +87,8 @@ class HobbyController extends Controller
             'beschreibung' => $request->get('beschreibung')
         ]);
 
-        return $this->index()->with([
-            'hobby_created' => 'Das Hobby <b>' . $request->name . '</b> wurde erfolgreich bearbeitet.'
+        return redirect()->route('hobby.index')->with([
+            'create_update_delete' => 'Das Hobby <b>' . $request->name . '</b> wurde erfolgreich bearbeitet.'
         ]);
     }
 
@@ -101,8 +101,8 @@ class HobbyController extends Controller
 
         $hobby->delete();
 
-        return $this->index()->with([
-            'hobby_created' => 'Das Hobby <b>' . $old_name . '</b> wurde erfolgreich gelöscht.'
+        return redirect()->route('hobby.index')->with([
+            'create_update_delete' => 'Das Hobby <b>' . $old_name . '</b> wurde erfolgreich gelöscht.'
         ]);
     }
 }

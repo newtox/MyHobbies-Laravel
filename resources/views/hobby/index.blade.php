@@ -27,6 +27,9 @@
                         <a class="btn btn-primary btn-sm mt-3" href="/hobby/create"><i class="fas fa-plus-circle"></i>
                             Neues
                             Hobby erstellen</a>
+                        <div class="mt-3">
+                            {{ $hobbies->links('vendor.pagination.bootstrap-5') }}
+                        </div>
                     </div>
                 </div>
             </div>

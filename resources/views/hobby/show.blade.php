@@ -1,3 +1,7 @@
+@php
+    use Illuminate\Support\Facades\URL;
+@endphp
+
 @extends('layouts.app')
 
 @section('title', 'Hobby Detailansicht')
@@ -12,7 +16,7 @@
                     <div class="card-body">
                         <p><b>{{ $hobby->name }}</b></p>
                         <p>{{ $hobby->beschreibung }}</p>
-                        <a class="btn btn-primary btn-sm mt-4" href="/hobby"><i
+                        <a class="btn btn-primary btn-sm mt-4" href="{{ URL::previous() }}"><i
                                 class="fas fa-circle-left"></i> Zurück zur Übersicht</a>
                     </div>
                 </div>

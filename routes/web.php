@@ -18,3 +18,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('hobby', App\Http\Controllers\HobbyController::class);
 
 Route::resource('tag', App\Http\Controllers\TagController::class);
+
+Route::resource('user', App\Http\Controllers\UserController::class);

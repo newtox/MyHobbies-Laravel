@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79f75cd5-91d9-4b16-ad68-cff0af7cec9e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hobby/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hobby/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +222,7 @@
       <workItem from="1728300279536" duration="87000" />
       <workItem from="1728300387819" duration="11748000" />
       <workItem from="1728370534551" duration="27073000" />
-      <workItem from="1728644917222" duration="11264000" />
+      <workItem from="1728644917222" duration="12733000" />
     </task>
     <servers />
   </component>

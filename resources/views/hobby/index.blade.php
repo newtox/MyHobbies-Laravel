@@ -13,6 +13,9 @@
                         <ul class="list-group">
                             @foreach($hobbies as $hobby)
                                 <li class="list-group-item">{{ $hobby->name }}
+                                    <span class="mx-1">
+                                        Von {{ $hobby->user->name }} ({{ $hobby->user->hobbies->count() }} Hobbies)
+                                    </span>
                                     <a class="ms-2" href="/hobby/{{ $hobby->id }}">Detailansicht</a>
                                     <a class="ms-2 btn btn-sm btn-outline-primary"
                                        href="/hobby/{{ $hobby->id }}/edit"><i

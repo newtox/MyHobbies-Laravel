@@ -11,7 +11,7 @@ class Hobby extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'beschreibung'];
+    protected $fillable = ['name', 'beschreibung', 'user_id'];
 
     public function user(): BelongsTo
     {

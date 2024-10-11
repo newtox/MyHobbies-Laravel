@@ -14,7 +14,8 @@
                             @foreach($hobbies as $hobby)
                                 <li class="list-group-item">{{ $hobby->name }}
                                     <a class="ms-2" href="/hobby/{{ $hobby->id }}">Detailansicht</a>
-                                    <a class="ms-2 btn btn-sm btn-outline-primary" href="/hobby/{{ $hobby->id }}/edit"><i
+                                    <a class="ms-2 btn btn-sm btn-outline-primary"
+                                       href="/hobby/{{ $hobby->id }}/edit"><i
                                             class="fas fa-pencil"></i> Bearbeiten</a>
                                     <form style="display: inline;" action="/hobby/{{ $hobby->id }}" method="post">
                                         @csrf
@@ -27,9 +28,12 @@
                                 </li>
                             @endforeach
                         </ul>
-                        <a class="btn btn-primary btn-sm mt-3" href="/hobby/create"><i class="fas fa-plus-circle"></i>
-                            Neues
-                            Hobby erstellen</a>
+                        @auth
+                            <a class="btn btn-primary btn-sm mt-3" href="/hobby/create"><i
+                                    class="fas fa-plus-circle"></i>
+                                Neues
+                                Hobby erstellen</a>
+                        @endauth
                         <div class="mt-3">
                             {{ $hobbies->links('vendor.pagination.bootstrap-5') }}
                         </div>

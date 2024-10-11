@@ -46,7 +46,8 @@ class HobbyController extends Controller
         $hobby = new Hobby(
             [
                 'name' => $request->get('name'),
-                'beschreibung' => $request->get('beschreibung')
+                'beschreibung' => $request->get('beschreibung'),
+                'user_id' => auth()->id()
             ]
         );
 

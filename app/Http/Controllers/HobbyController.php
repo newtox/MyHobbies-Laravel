@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateHobbyRequest;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
+use Illuminate\Support\Carbon;
 
 class HobbyController extends Controller
 {
@@ -17,7 +18,8 @@ class HobbyController extends Controller
     public function index(): View|Factory|Application
     {
         // $hobbies = Hobby::all();
-        $hobbies = Hobby::query()->paginate(10);
+        // $hobbies = Hobby::query()->paginate(10);
+        $hobbies = Hobby::query()->orderBy('created_at', 'desc')->paginate(10);
         return view('hobby.index')->with('hobbies', $hobbies);
     }
 

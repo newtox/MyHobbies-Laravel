@@ -21,6 +21,9 @@
                                         @method('DELETE')
                                         <input class="ms-2 btn btn-sm btn-outline-danger" type="submit" value="Löschen">
                                     </form>
+                                    <div class="float-end">
+                                        {{ $hobby->created_at->diffForHumans() }}
+                                    </div>
                                 </li>
                             @endforeach
                         </ul>

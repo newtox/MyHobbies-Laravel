@@ -24,7 +24,7 @@
                         <p>
                             @foreach($hobby->tags as $tag)
                                 <a class="badge text-bg-{{ $tag->style }} me-2 text-decoration-none"
-                                   href="/tag/{{ $tag->id }}/edit">{{ $tag->name }}</a>
+                                   href="/hobby/tag/{{ $tag->id }}">{{ $tag->name }}</a>
                             @endforeach
                         </p>
                         <a class="btn btn-primary btn-sm mt-4" href="{{ URL::previous() }}"><i

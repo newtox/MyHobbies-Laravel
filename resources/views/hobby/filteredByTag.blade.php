@@ -7,7 +7,9 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ __('Alle Hobbies') }}</div>
+                    <div class="card-header">Alle Hobbies gefiltert nach <span style="font-size: 120%;" class="badge text-bg-{{ $tag->style }}">{{ $tag->name }}</span>
+                        <a class="float-end" href="/hobby">Alle Hobbies anzeigen</a>
+                    </div>
 
                     <div class="card-body">
                         <ul class="list-group">
@@ -15,17 +17,17 @@
                                 <li class="list-group-item"><b>{{ $hobby->name }}</b>
                                     <span class="ms-2">
                                         Von <a
-                                            href="/user/{{ $hobby->user->id }}">{{ $hobby->user->name }}</a> ({{ $hobby->user->hobbies->count() }} {{$hobby->user->hobbies->count() > 1 ? "Hobbies" : "Hobby"}})
+                                                href="/user/{{ $hobby->user->id }}">{{ $hobby->user->name }}</a> ({{ $hobby->user->hobbies->count() }} {{$hobby->user->hobbies->count() > 1 ? "Hobbies" : "Hobby"}})
                                     </span>
                                     <a class="ms-2" href="/hobby/{{ $hobby->id }}">Detailansicht</a>
                                     @foreach($hobby->tags as $tag)
                                         <a
-                                            class="badge text-bg-{{ $tag->style }} ms-2 text-decoration-none"
-                                            href="/hobby/tag/{{ $tag->id }}">{{ $tag->name }}</a>
+                                                class="badge text-bg-{{ $tag->style }} ms-2 text-decoration-none"
+                                                href="/hobby/tag/{{ $tag->id }}">{{ $tag->name }}</a>
                                     @endforeach
                                     <a class="ms-2 btn btn-sm btn-outline-primary"
                                        href="/hobby/{{ $hobby->id }}/edit"><i
-                                            class="fas fa-pencil"></i> Bearbeiten</a>
+                                                class="fas fa-pencil"></i> Bearbeiten</a>
                                     <form style="display: inline;" action="/hobby/{{ $hobby->id }}" method="post">
                                         @csrf
                                         @method('DELETE')
@@ -40,7 +42,7 @@
                         </ul>
                         @auth
                             <a class="btn btn-primary btn-sm mt-3" href="/hobby/create"><i
-                                    class="fas fa-plus-circle"></i>
+                                        class="fas fa-plus-circle"></i>
                                 Neues
                                 Hobby erstellen</a>
                         @endauth

@@ -21,13 +21,15 @@
                     <div class="card-body">
                         <p><b>{{ $hobby->name }}</b></p>
                         <p>{{ $hobby->beschreibung }}</p>
-                        <p>
-                            <b>Verknüpfte Tags:</b> (klicken zum entfernen)<br>
-                            @foreach($usedTags as $tag)
-                                <a class="badge text-bg-{{ $tag->style }} ms-2 text-decoration-none"
-                                   href="/hobby/{{ $hobby->id }}/tag/{{ $tag->id }}/detach">{{ $tag->name }}</a>
-                            @endforeach
-                        </p>
+                        @if($hobby->tags->count() > 0)
+                            <p>
+                                <b>Verknüpfte Tags:</b> (klicken zum entfernen)<br>
+                                @foreach($usedTags as $tag)
+                                    <a class="badge text-bg-{{ $tag->style }} ms-2 text-decoration-none"
+                                       href="/hobby/{{ $hobby->id }}/tag/{{ $tag->id }}/detach">{{ $tag->name }}</a>
+                                @endforeach
+                            </p>
+                        @endif
                         <p>
                             <b>Verfügbare Tags:</b> (klicken zum hinzufügen)<br>
                             @foreach($availableTags as $tag)

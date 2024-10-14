@@ -17,6 +17,15 @@
                         <h3>{{ $user->name }}</h3>
                         <p><b>Motto: </b>{{ $user->motto }}</p>
                         <p>{{ $user->ueber_mich }}</p>
+                        <ul>
+                            @foreach($user->hobbies as $hobby)
+                                <li>
+                                    <a href="/hobby/{{ $hobby->id }}" class="text-decoration-none">
+                                        <b>{{ $hobby->name }}</b>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
                         <a class="btn btn-primary btn-sm mt-4" href="{{ URL::previous() }}"><i
                                 class="fas fa-circle-left"></i> Zurück zur Übersicht</a>
                     </div>

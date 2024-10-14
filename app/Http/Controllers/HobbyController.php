@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Hobby;
 use App\Http\Requests\StoreHobbyRequest;
 use App\Http\Requests\UpdateHobbyRequest;
+use App\Models\Tag;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
-use Illuminate\Support\Carbon;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Session;
 
 class HobbyController extends Controller
 {
@@ -34,7 +36,7 @@ class HobbyController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreHobbyRequest $request)
+    public function store(StoreHobbyRequest $request): RedirectResponse
     {
         $request->validate(
             [
@@ -63,7 +65,18 @@ class HobbyController extends Controller
      */
     public function show(Hobby $hobby): View|Factory|Application
     {
-        return view('hobby.show')->with('hobby', $hobby);
+        $allTags = Tag::all();
+        $usedTags = $hobby->tags;
+        $availableTags = $allTags->diff($usedTags);
+
+        $create_update_delete = Session::get('create_update_delete');
+
+        return view('hobby.show')->with([
+            'hobby' => $hobby,
+            'create_update_delete' => $create_update_delete,
+            'usedTags' => $usedTags,
+            'availableTags' => $availableTags,
+        ]);
     }
 
     /**
@@ -77,7 +90,7 @@ class HobbyController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateHobbyRequest $request, Hobby $hobby)
+    public function update(UpdateHobbyRequest $request, Hobby $hobby): RedirectResponse
     {
         $request->validate(
             [
@@ -99,7 +112,7 @@ class HobbyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Hobby $hobby)
+    public function destroy(Hobby $hobby): RedirectResponse
     {
         $old_name = $hobby->name;
 

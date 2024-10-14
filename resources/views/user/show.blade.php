@@ -26,8 +26,8 @@
                                 </li>
                             @endforeach
                         </ul>
-                        <a class="btn btn-primary btn-sm mt-4" href="{{ URL::previous() }}"><i
-                                class="fas fa-circle-left"></i> Zurück zur Übersicht</a>
+                        <a class="btn btn-secondary btn-sm mt-4 float-end" href="{{ URL::previous() }}"><i
+                                class="fas fa-circle-left"></i> Zurück</a>
                     </div>
                 </div>
             </div>

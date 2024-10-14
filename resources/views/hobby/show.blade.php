@@ -37,8 +37,10 @@
                                    href="/hobby/{{ $hobby->id }}/tag/{{ $tag->id }}/attach">{{ $tag->name }}</a>
                             @endforeach
                         </p>
-                        <a class="btn btn-primary btn-sm mt-4" href="{{ URL::previous() }}"><i
-                                class="fas fa-circle-left"></i> Zurück zur Übersicht</a>
+                        @if(!(strstr(URL::previous(), '/user/')))
+                            <a class="btn btn-secondary btn-sm mt-4 float-end" href="{{ URL::previous() }}"><i
+                                    class="fas fa-circle-left"></i> Zurück</a>
+                        @endif
                     </div>
                 </div>
             </div>

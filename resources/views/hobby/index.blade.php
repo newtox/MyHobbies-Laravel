@@ -12,18 +12,23 @@
                     <div class="card-body">
                         <ul class="list-group">
                             @foreach($hobbies as $hobby)
-                                <li class="list-group-item">{{ $hobby->name }}
-                                    <span class="mx-1">
-                                        Von <a href="/user/{{ $hobby->user->id }}">{{ $hobby->user->name }}</a> ({{ $hobby->user->hobbies->count() }} Hobbies)
+                                <li class="list-group-item"><b>{{ $hobby->name }}</b>
+                                    <span class="ms-2">
+                                        Von <a
+                                            href="/user/{{ $hobby->user->id }}">{{ $hobby->user->name }}</a> ({{ $hobby->user->hobbies->count() }} {{$hobby->user->hobbies->count() > 1 ? "Hobbies" : "Hobby"}})
                                     </span>
                                     <a class="ms-2" href="/hobby/{{ $hobby->id }}">Detailansicht</a>
+                                    @foreach($hobby->tags as $tag)
+                                        <a class="badge text-bg-{{ $tag->style }} ms-2 text-decoration-none" href="/tag/{{ $tag->id }}/edit">{{ $tag->name }}</a>
+                                    @endforeach
                                     <a class="ms-2 btn btn-sm btn-outline-primary"
                                        href="/hobby/{{ $hobby->id }}/edit"><i
                                             class="fas fa-pencil"></i> Bearbeiten</a>
                                     <form style="display: inline;" action="/hobby/{{ $hobby->id }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <input class="ms-2 btn btn-sm btn-outline-danger" type="submit" value="Löschen">
+                                        <input class="ms-2 btn btn-sm btn-outline-danger" type="submit"
+                                               value="Löschen">
                                     </form>
                                     <div class="float-end">
                                         {{ $hobby->created_at->diffForHumans() }}

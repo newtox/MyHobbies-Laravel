@@ -21,6 +21,12 @@
                     <div class="card-body">
                         <p><b>{{ $hobby->name }}</b></p>
                         <p>{{ $hobby->beschreibung }}</p>
+                        <p>
+                            @foreach($hobby->tags as $tag)
+                                <a class="badge text-bg-{{ $tag->style }} me-2 text-decoration-none"
+                                   href="/tag/{{ $tag->id }}/edit">{{ $tag->name }}</a>
+                            @endforeach
+                        </p>
                         <a class="btn btn-primary btn-sm mt-4" href="{{ URL::previous() }}"><i
                                 class="fas fa-circle-left"></i> Zurück zur Übersicht</a>
                     </div>

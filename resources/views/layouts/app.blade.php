@@ -91,17 +91,17 @@
     </nav>
 
     <main class="py-4">
-        @isset($create_update_delete)
+        @if (session('create_update_delete'))
             <div class="container mb-lg-3">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="alert alert-success">
-                            {!! $create_update_delete !!}
+                            {!! session('create_update_delete') !!}
                         </div>
                     </div>
                 </div>
             </div>
-        @endisset
+        @endif
 
         @if($errors->any())
             <div class="container mb-lg-3">

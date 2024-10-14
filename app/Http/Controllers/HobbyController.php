@@ -40,7 +40,7 @@ class HobbyController extends Controller
     {
         $request->validate(
             [
-                'name' => ['required', 'string', 'min:3', 'max:255'],
+                'name' => ['required', 'string', 'min:3', 'max:255', 'regex:/^[\w\s\-]+$/'],
                 'beschreibung' => ['required', 'string', 'min:5', 'max:255'],
             ]
         );

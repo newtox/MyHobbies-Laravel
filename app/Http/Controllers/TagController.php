@@ -35,8 +35,8 @@ class TagController extends Controller
     {
         $request->validate(
             [
-                'name' => ['required', 'string'],
-                'style' => ['required', 'string'],
+                'name' => ['required', 'string', 'regex:/^[\w\s\-]+$/'],
+                'style' => ['required', 'string', 'in:primary,secondary,success,danger,warning,info,light,dark'],
             ]
         );
 
